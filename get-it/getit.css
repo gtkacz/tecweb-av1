@@ -524,6 +524,19 @@ a:focus {
   display: none;
 }
 
+.error-page{
+  display: flex;
+  flex-direction: column;
+	justify-content: center;
+  align-items: center;
+  align-content: center;
+	/* flex-wrap: wrap; */
+}
+
+.error-item{
+  align-self: center;
+}
+
 .card-rotation-1  {background-color: #ead3a7}
 .card-rotation-2  {background-color: #9de0f5}
 .card-rotation-3  {background-color: #ef89ba}
