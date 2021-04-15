@@ -1,0 +1,27 @@
+<div class="card">
+    <h3 class="card-title" name="author"><span class="card-underline" id="title" name="id_title-{id}">{title}</span></h3>
+    
+
+    <div class="card-content">
+        <span id="details" name="id_content-{id}" >{details}</span>
+    </div>
+
+    <input class="edit-content" type="image" src="img/edit_black_24dp.svg" name='button-edit' title="Edite esse post-it" value="" onclick="editNote({id})" />
+
+    <form name="edit-form" method="post" class="edit-form">
+        <!-- <input class="card-title edit-form-card-title" name="card-title" type="text" placeholder="{title}" value="{title}""></input>
+        <input class="card-content edit-form-card-content" name="card-content" type="text" placeholder="{details}" value="{details}""></input> -->
+        
+        <!-- <textarea class="card-title edit-form-card-title card-underline" wrap="soft" rows="1" name="card-title" placeholder="{title}" value="{title}"">{title}</textarea>
+        <textarea class="card-content edit-form-card-content" rows="5" wrap="soft" name="card-content" placeholder="{details}" value="{details}"">{details}</textarea> -->
+
+        <!-- <input class="edit-content" type="image" src="img/edit_black_24dp.svg" name='button-edit' title="Edite esse post-it" value="" onclick="editNote({id})" />
+        <input type="hidden" name="edit_note_id-{id}" /> -->
+    </form>
+
+    <form name="delete-form" method="post">
+        <input class="delete-content" type="image" src="img/clear_black_24dp.svg" name='button-delete' title="Delete esse post-it" value=""/>
+        <input type="hidden" name="delete_note_id" value="{id}" />
+    </form>
+
+</div>

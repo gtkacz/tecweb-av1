@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get-it</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+      integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="getit.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Covered+By+Your+Grace&family=Gloria+Hallelujah&family=Kalam:wght@300;400;700&family=Rock+Salt&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  </head>
+
+  <body>
+    <div class="appbar">
+      <img src="img/logo-getit.png" class="logo" />
+      <span class="subtitle">Como o Post-it, mas com outro verbo</span>
+      <!-- <img src="img/info_black_24dp.svg" class="info-img" title="Project to create and save annotations on database via website interface. Backend made with Python. Databases handled with SQLite via sqlite3 Python library. Website built with HTML/CSS and javascript."/> -->
+      <a href="https://github.com/gtkacz/get-it" target="_blank"><img src="img/iconmonstr-github-1.svg" class="info-img" title="Source code"/></a>
+    </div>
+
+    <!-- <div class="info-card">
+      <div class="info-btn">
+        <i class="fas fa-info"></i>
+      </div>
+      <h1 class="info-text-title">About this app</h1>
+      <p class="info-text">Lorem ipsum dolor sit amet, consectet</p>
+    </div> -->
+    
+    <main class="container">
+      <form class="form-card form-card-style" method="post">
+        <input type="hidden" value='None' name='edit_note_id'> 
+        <input
+          id="titulo" class="form-card-title" type="text" name="titulo" placeholder="Título"
+        />
+        <textarea class="autoresize" name="detalhes" type="text" placeholder="Detalhes" ></textarea>
+        <button class="btn" type="submit""><p class="texto-botao" name="form-btn">Criar</p></button>
+      </form>
+
+      <form method="post" class="form-restore">
+        <button id="button-restore" class="botao-invisivel" type="submit">A</button>
+        <input type="image" src="img/restore_black_24dp.svg" class="restore-content" title="Restaurar o conteúdo original do banco de dados"/>
+        <input type="hidden" name="restore-db" value="restore-db"/>
+      </form>
+    
+      <div class="card-container">
+          {notes}    
+      </div>
+    </main>
+    <script type="text/javascript" src="getit.js"></script>
+  </body>
+</html>
