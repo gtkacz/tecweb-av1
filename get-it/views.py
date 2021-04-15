@@ -40,4 +40,5 @@ def index(request):
         return build_response(code = 303, reason = 'See Other', headers = 'Location: /')
     
 def not_found():
-    return build_response(body = '404\nPage Not Found', code = 404, reason = 'Not Found') + load_template('404.html').encode(encoding='utf-8')
+    # return build_response(body = '404\nPage Not Found', code = 404, reason = 'Not Found') + load_template('404.html').encode(encoding='utf-8')
+    return build_response() + load_template('404.html').encode(encoding='utf-8')
