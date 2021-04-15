@@ -1,0 +1,16 @@
+{% extends "notes/base.html" %}
+
+{% block content %}
+<p>Bem-vindo ao Memo!</p>
+
+<form method="post">
+  {% csrf_token %}
+  <label for="content">Conteúdo</label>
+  <textarea id="content" name="content"></textarea>
+  <input type="submit" />
+</form>
+
+<ul>
+  <h3>{{note.content}}</h3>
+</ul>
+{% endblock %}

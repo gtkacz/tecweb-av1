@@ -3,10 +3,9 @@ from .models import Note
 
 def index(request):
     if request.method=='POST':
-        title=request.POST.get('titulo')
-        content=request.POST.get('detalhes')
+        content=request.POST.get('content')
         
-        note = Note(title=title, content=content)
+        note = Note(content=content)
         note.save()
                     
         return redirect('index')
