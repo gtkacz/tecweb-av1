@@ -1,0 +1,35 @@
+html,
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+	justify-content: space-evenly;
+    align-items: center;
+    align-content: space-around;
+}
+
+.form-memo{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 20em;
+    margin: auto;
+    /* box-shadow: 0 7px 12px rgba(0, 0, 0, 0.4); */
+    margin-bottom: 1.5rem;
+    border-radius: 0.35rem;
+}
+
+.form-text{
+    resize: none;
+}
+
+.form-btn{
+    position: relative;
+    display: block;
+    cursor: pointer;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+}

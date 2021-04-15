@@ -1,16 +1,14 @@
 {% extends "notes/base.html" %}
 
 {% block content %}
-<p>Bem-vindo ao Memo!</p>
+<p class="memo-title">Bem-vindo ao Memo!</p>
 
-<form method="post">
+<form method="post" class="form-memo">
   {% csrf_token %}
-  <label for="content">Conteúdo</label>
-  <textarea id="content" name="content"></textarea>
-  <input type="submit" />
+  {% comment %} <label for="content">Conteúdo</label> {% endcomment %}
+  <textarea id="content" name="content" class="form-text"></textarea>
+  <input type="submit" class="form-btn"/>
 </form>
 
-<ul>
-  <h3>{{note.content}}</h3>
-</ul>
+<h3 class="note-content">{{note.content}}</h3>
 {% endblock %}
